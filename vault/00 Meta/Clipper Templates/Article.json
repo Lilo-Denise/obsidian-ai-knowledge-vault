@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Article",
+  "behavior": "create",
+  "noteNameFormat": "{{title|safe_name}}",
+  "path": "01 Inbox/Clipper",
+  "properties": [
+    {
+      "name": "type",
+      "value": "source",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "value": "inbox",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{published|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "created",
+      "value": "{{date|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "",
+      "type": "multitext"
+    }
+  ],
+  "noteContentFormat": "# {{title}}\n\n[Original]({{url}}) · {{site}} · {{author}} · {{published|date:\"YYYY-MM-DD\"}}\n\n## Highlights\n\n{{highlights}}\n\n---\n\n## Original\n\n{{content}}",
+  "triggers": []
+}

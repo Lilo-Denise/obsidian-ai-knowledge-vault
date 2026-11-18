@@ -1,0 +1,11 @@
+{
+  "types": {
+    "type": "text",
+    "status": "text",
+    "source": "text",
+    "author": "text",
+    "published": "date",
+    "created": "date",
+    "tags": "tags"
+  }
+}

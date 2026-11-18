@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "YouTube",
+  "behavior": "create",
+  "noteNameFormat": "{{schema:@VideoObject:name|safe_name}}",
+  "path": "01 Inbox/Clipper",
+  "properties": [
+    {
+      "name": "type",
+      "value": "source",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "value": "inbox",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{schema:@VideoObject:author}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{schema:@VideoObject:uploadDate|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "created",
+      "value": "{{date|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "",
+      "type": "multitext"
+    }
+  ],
+  "noteContentFormat": "# {{schema:@VideoObject:name}}\n\n[Watch]({{url}}) · {{schema:@VideoObject:author}} · {{schema:@VideoObject:duration|replace:\"PT\":\"\"}}\n\n{{schema:@VideoObject:description}}\n\n---\n\n## Transcript\n\n{{transcript}}",
+  "triggers": [
+    "https://www.youtube.com/watch",
+    "https://youtu.be/",
+    "https://m.youtube.com/watch"
+  ]
+}
